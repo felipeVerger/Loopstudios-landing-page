@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, Stack, ThemeProvider } from '@mui/material'
+import {theme} from './assets/theme.js';
 
-function App() {
+import Header from './components/Header/Header'
+import Main from './components/Main/Main.js';
+import Footer from './components/Footer/Footer.js';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+        <Stack height='100%'>
+            <Header/>
+            <Container maxWidth='lg'>
+                <Main/>
+            </Container>
+            <Footer/>
+        </Stack>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
