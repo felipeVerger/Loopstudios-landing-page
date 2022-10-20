@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer.js';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-        <Stack height='100%'>
+        <Stack height='100%' position='relative'>
             <Header/>
             <Container maxWidth='lg'>
                 <Main/>

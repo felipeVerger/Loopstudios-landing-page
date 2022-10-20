@@ -30,6 +30,36 @@ export const useStyles = makeStyles((theme) => ({
         '&:hover': {
             borderBottom: '1px solid white',
         }
+    },
+    menuIcon: {
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        }
+    },
+    mobileMenu: {
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        bottom: '0',
+        right: '0',
+        zIndex: '100',
+        height: '100%',
+        backgroundColor: 'black',
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        }
+    },
+    mobileLogo: {
+        width: '200px',
+    },
+    navItemsMobile: {
+        cursor: 'pointer',
+        fontFamily: theme.typography.alata,
+        '&:hover': {
+            borderBottom: '1px solid white',
+        }
     }
 }));
 
